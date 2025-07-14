@@ -1,0 +1,8 @@
+<div class="event-list container">
+  <h2>Próximos Eventos</h2>
+  <div *ngFor="let event of events" class="event-card">
+    <h3>{{ event.title }}</h3>
+    <p><strong>Fecha:</strong> {{ event.date }}</p>
+    <p><strong>Lugar:</strong> {{ event.location }}</p>
+  </div>
+</div>
