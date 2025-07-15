@@ -18,7 +18,7 @@ export class MyTicketsComponent {
       cantidad: 2,
       total: 100,
       fechaCompra: '2025-07-15',
-      imageSrc: 'https://picsum.photos/200/300'
+      imageSrc: 'https://img.freepik.com/vector-premium/cartel-fiesta-noche-rock-volantes-ilustracion-estilo-vintage_148087-269.jpg?semt=ais_hybrid&w=740'
     },
     {
       id: 2,
@@ -27,7 +27,7 @@ export class MyTicketsComponent {
       cantidad: 1,
       total: 0,
       fechaCompra: '2025-07-14',
-      imageSrc: 'https://picsum.photos/200/300'
+      imageSrc: 'https://d1csarkz8obe9u.cloudfront.net/posterpreviews/rock-music-party-flyer-design-template-360c916896c61b12dabe7d2ca605156a_screen.jpg?ts=1707738686'
     }
   ];
 }

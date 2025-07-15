@@ -1,14 +1,15 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
+import { CommonModule } from '@angular/common';
 import { HeaderComponent } from './shared/components/header/header.component';
 
 @Component({
   standalone: true,
   selector: 'app-root',
-  imports: [RouterOutlet, HeaderComponent],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrls: ['./app.component.css'],
+  imports: [CommonModule, RouterModule, HeaderComponent]
 })
 export class AppComponent {
-  title = 'gestion-eventos-ticketing';
+  constructor(public router: Router) {}
 }

@@ -22,7 +22,7 @@ export class EventDetailComponent {
       description: 'Un concierto con las mejores bandas nacionales.',
       status: 'activo',
       price: 50,
-      imageSrc: 'https://picsum.photos/200/300'
+      imageSrc: 'https://d1csarkz8obe9u.cloudfront.net/posterpreviews/rock-music-party-flyer-design-template-360c916896c61b12dabe7d2ca605156a_screen.jpg?ts=1707738686'
     },
     {
       id: 2,
@@ -32,7 +32,7 @@ export class EventDetailComponent {
       description: 'Evento cultural con editoriales y autores invitados.',
       status: 'cancelado',
       price: 0,
-      imageSrc: 'https://picsum.photos/200/300'
+      imageSrc: 'https://img.freepik.com/vector-premium/cartel-fiesta-noche-rock-volantes-ilustracion-estilo-vintage_148087-269.jpg?semt=ais_hybrid&w=740'
     }
   ];
 
