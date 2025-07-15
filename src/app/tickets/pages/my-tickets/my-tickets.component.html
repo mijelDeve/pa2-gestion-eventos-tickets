@@ -1,0 +1,23 @@
+<div class="ticket-container">
+  <h2>Mis Tickets</h2>
+
+  <div *ngIf="tickets.length === 0">
+    <p>No tienes tickets comprados aún.</p>
+  </div>
+
+  <div *ngFor="let ticket of tickets" class="ticket-card">
+    <div class="ticket-content">
+      <!-- Imagen del evento -->
+      <img [src]="ticket.imageSrc" alt="{{ ticket.tituloEvento }}" class="ticket-image" />
+
+      <!-- Detalles del ticket -->
+      <div class="ticket-details">
+        <h3>{{ ticket.tituloEvento }}</h3>
+        <p><strong>Fecha de compra:</strong> {{ ticket.fechaCompra }}</p>
+        <p><strong>Cantidad:</strong> {{ ticket.cantidad }}</p>
+        <p><strong>Total pagado:</strong> S/ {{ ticket.total.toFixed(2) }}</p>
+        <a [routerLink]="['/evento', ticket.eventoId]">Ver evento</a>
+      </div>
+    </div>
+  </div>
+</div>

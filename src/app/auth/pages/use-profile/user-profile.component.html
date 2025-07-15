@@ -1,0 +1,36 @@
+<div class="profile-container">
+  <h2>Mi Perfil</h2>
+
+  <div class="profile-card">
+    <div class="avatar-container">
+      <img [src]="user.avatar" alt="Avatar de usuario" class="avatar" />
+    </div>
+
+    <form [formGroup]="form" *ngIf="editing; else readOnly">
+      <label>Nombre:</label>
+      <input formControlName="nombre" type="text" />
+
+      <label>Correo:</label>
+      <input formControlName="correo" type="email" />
+
+      <div class="button-group">
+        <button type="button" (click)="guardar()">Guardar</button>
+        <button type="button" class="cancelar" (click)="cancelar()">Cancelar</button>
+      </div>
+    </form>
+
+    <ng-template #readOnly>
+      <p><strong>Nombre:</strong> {{ user.nombre }}</p>
+      <p><strong>Correo:</strong> {{ user.correo }}</p>
+      <p><strong>Fecha de registro:</strong> {{ user.fechaRegistro }}</p>
+      <p>
+        <strong>Estado:</strong>
+        <span [ngClass]="{ 'activo': user.estado === 'activo', 'inactivo': user.estado !== 'activo' }">
+          {{ user.estado | titlecase }}
+        </span>
+      </p>
+
+      <button type="button" (click)="editar()">Editar perfil</button>
+    </ng-template>
+  </div>
+</div>
