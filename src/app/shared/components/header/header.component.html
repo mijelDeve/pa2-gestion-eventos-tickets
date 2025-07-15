@@ -1,9 +1,20 @@
 <header class="header">
-  <div class="container">
-    <h1>Gestión de Eventos</h1>
-    <nav>
-      <a routerLink="/">Eventos</a>
-      <a routerLink="/crear">Crear Evento</a>
+  <div class="container header-content">
+    <!-- 🔷 Logo -->
+    <div class="logo">
+      <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
+        <path d="M12 2L15 8H9L12 2Z" fill="#1e88e5"/>
+        <path d="M9 10H15L12 22L9 10Z" fill="#1e88e5"/>
+      </svg>
+      <span class="logo-text">Eventos</span>
+    </div>
+
+    <!-- 📌 Navegación -->
+    <nav class="main-nav">
+      <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Eventos</a>
+      <a routerLink="/crear" routerLinkActive="active">Crear Evento</a>
+      <a routerLink="/mis-tickets" routerLinkActive="active">Mis Tickets</a>
+      <a routerLink="/perfil" routerLinkActive="active">Mi Perfil</a>
     </nav>
   </div>
 </header>

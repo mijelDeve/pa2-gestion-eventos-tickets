@@ -1,0 +1,37 @@
+<div class="container" *ngIf="event; else notFound">
+  <div class="event-detail-content" style="margin-top: 12px;">
+    <!-- Imagen a la izquierda -->
+    <img [src]="event.imageSrc" alt="{{ event.title }}" class="event-detail-image" />
+
+    <!-- Detalles a la derecha -->
+    <div class="event-detail-info">
+      <h2>{{ event.title }}</h2>
+      <p><strong>Fecha:</strong> {{ event.date }}</p>
+      <p><strong>Lugar:</strong> {{ event.location }}</p>
+      <p><strong>Descripción:</strong> {{ event.description }}</p>
+
+      <p>
+        <strong>Estado:</strong>
+        <span [ngClass]="{
+          'estado-activo': event.status === 'activo',
+          'estado-inactivo': event.status === 'inactivo',
+          'estado-cancelado': event.status === 'cancelado',
+          'estado-finalizado': event.status === 'finalizado'
+        }">
+          {{ event.status | titlecase }}
+        </span>
+      </p>
+
+      <button class="btn-comprar" [disabled]="event.status !== 'activo'">
+        Comprar ticket
+      </button>
+    </div>
+  </div>
+</div>
+
+<ng-template #notFound>
+  <div class="container">
+    <h2>Evento no encontrado</h2>
+    <p>No se encontró un evento con el ID proporcionado.</p>
+  </div>
+</ng-template>

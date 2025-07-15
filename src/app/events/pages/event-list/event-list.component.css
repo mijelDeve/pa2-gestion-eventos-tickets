@@ -1,10 +1,38 @@
-.container {
-  padding: 2rem;
+.event-card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  padding: 16px;
+  background-color: #f9f9f9;
 }
 
-.event-card {
-  background: #f1f1f1;
-  padding: 1rem;
-  margin-bottom: 1rem;
+.event-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.event-image {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
   border-radius: 8px;
+}
+
+.event-details {
+  flex: 1;
+}
+
+.btn-ver-mas {
+  display: inline-block;
+  margin-top: 10px;
+  background-color: #007bff;
+  color: white;
+  padding: 6px 12px;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+.btn-ver-mas:hover {
+  background-color: #0056b3;
 }

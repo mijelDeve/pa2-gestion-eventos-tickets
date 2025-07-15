@@ -1,0 +1,40 @@
+.event-detail-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}
+
+.event-detail-image {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.event-detail-info {
+  flex: 1;
+}
+
+.btn-comprar {
+  background-color: #28a745;
+  color: white;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.btn-comprar:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.estado-activo {
+  color: green;
+  font-weight: bold;
+}
